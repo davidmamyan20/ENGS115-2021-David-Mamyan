@@ -1,0 +1,1 @@
+In today's lecture, we further discussed about containers, forward containers, reverse containers. We discussed about models, deques. And also we discussed about Random Access Containers. Also during the code reading we discussed about access.

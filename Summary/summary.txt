@@ -1,1 +1,20 @@
+01/09/21
+
 In the lecture, we discussed one of the videos we were supposed to watch at home. The video was about Big O notation, where the woman brought 4 steps of Big O notation 1.) Different steps get added, 2.)Drop constants, 3.) Different inputs and different variables, 4.) Drop non-dominate terms. Then we tried to understand the asymptotic notation. I understood that there are some codes, which do a lot of steps in a second, I think that is why there is a Big O notation, like O(n). Dropping constants means if O(n) becomes O(2n), it means we can simply write O(n) again, because n is not a constant number. Then we had a little discussion about the git, we knew about the creation of github and what its goal was. I think the goal was to create a network that people could save their work and use it whenever they need it.
+
+03/09/21
+
+During the class we starting learning more about GitHub and its commands, as I think all of us should know some information about the network which we use to save our projects there. We learnt about the difference between the staged and unstaged files, which were also familiar to us, because it simply included, git add, git commit and git push. At the last minutes of the lecture we discussed a question based on our new topic Big O Notations, and also got a home assignment to do.
+
+06/09/21
+
+Today we discussed new topic, about the types and concepts of the codes. According to the instructor, today was one of the most important lectures in order to continue the course. During the class I was able to understand the difference between the objects, models and concepts. First we declare the concept, then the model and in the end the object. We discussed different examples, during the lecture in order to better understand the topic. For example, University was mentioned as a model, and AUA was declared as an object. So it's like first when we declare concept, we explain what its objects include in order to better understand the following concept. Also the example of the types of numbers were discussed like the different types, for example integer, rational number, real number and natural number.
+
+08/09/21
+
+In today's lecture, we further discussed about containers, forward containers, reverse containers. We discussed about models, deques. And also we discussed about Random Access Containers. Also during the code reading we discussed about access.
+
+13/09/21
+
+In today's lecture, after learning about Containers,Random Access, Reverse Containers and Forward containers, we started to talk about sequences. Sequence is a variable sized container with strict linear ordered elements. There are two types of sequences, Front Insertion Sequences, which insert an element at the beginning and require constant time complexity, and Back Insertion Sequence which append an element on the end and also require amortized constant time complexity. We also got a reference from STL, which means Standard Templates Library. So we went on our discussion about the arrays and memory allocation on them. We also allocated memory with the number of bytes. We also discussed what free (ac) and delete[] ac++, for both c and c++ styles respectfully.
+

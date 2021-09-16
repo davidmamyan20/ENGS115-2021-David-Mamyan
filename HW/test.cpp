@@ -1,106 +1,64 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <cassert>
-#include <time.h>
+#include <limits.h>
 
-int** create_matrix(int n)
+typedef double element_type;
+typedef int size_type;
+
+struct array
 {
-    int** m = new int*[n];
-    for (int i = 0; i < n; ++i) {
-        m[i] = new int[n];
-    }
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            m[i][j] = 0;
-        }
-    }
-    return m;
+    element_type* start;
+    size_type size;
+};
+
+size_type size(struct array* o)
+{
+    return o->size;
 }
 
-void delete_matrix(int** m, int n)
+int empty(struct array* o)
 {
-    for (int i = 0; i < n; ++i) {
-        delete [] m[i];
-    }
-    delete [] m;
+    return (o->size == 0);
 }
 
-void fill_matrix_with_random_elements(int** m, int n)
+size_type max_size(struct array* o)
 {
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            int r = rand() % 2;
-            m[i][j] = r;
-        }
-    }
+    return INT_MAX;
 }
 
-void print_matrix(int** m, int n)
+element_type access(struct array* o, int index)
 {
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            printf("%d ", m[i][j]);
-        }
-        printf("\n");
-    }
+    return o->start[index];
 }
 
-bool check_all_elements_in_row_are_zero(int** a, int n, int i)
+struct array* create(int s)
 {
-    assert(i >= 0);
-    assert(i < n);
-    for (int j = 0; j < n; ++j) {
-        if (a[i][j] != 0) {
-            return false;
-        }
-    }
-    return true;
+   struct array* a = (struct array*)malloc(sizeof(struct array));
+   a->size = s;
+   a->start = (element_type*)malloc(sizeof(element_type) * s);
+   return a;
 }
 
-bool check_all_elements_in_column_are_zero(int** a, int n, int i)
+double insert(struct array* o)
 {
-    assert(i >= 0);
-    assert(i < n);
-    for (int j = 0; j < n; ++j) {
-        if (a[j][i] != 0) {
-            return false;
-        }
-    }
-    return true;
-}
-
-void check_for_zero(int** m, int n)
-{
-    for (int i = 0; i < n; ++i) {
-        bool b = check_all_elements_in_row_are_zero(m, n, i);
-        bool x = check_all_elements_in_column_are_zero(m, n, i);
-        if (b) {
-            printf("all elements in row %d are zero\n", i);
-            break;
-        }
-        if (x) {
-            printf("all elements in column %d are zero\n", i);
-            break;
-        }
-    }
+	int position = 0;
+	int value = 0;
+	printf("Enter the value which you want to use");
+	scanf("%d", &value);
+	printf("Enter the postion from 0 to 33");
+	scanf("%d", &position);
+	return o -> start[position] = value;
 }
 
 int main()
 {
-    int n = 0;
-    // Use current time as seed for random generator
-    srand(time(0));
-    printf("Enter array size: ");
-    scanf("%d", &n);
-    if (n <= 0) {
-        printf("Invalid input, exiting...\n");
-        return EXIT_FAILURE;
+    int i = 0;
+    struct array* a = create(34);
+    insert(a);
+    for (i = 0; i < size(a); ++i) {
+        printf("a[%d]=%f\n", i, access(a, i));
     }
-    int** matrix = create_matrix(n);
-    fill_matrix_with_random_elements(matrix, n);
-    print_matrix(matrix, n);
-    check_for_zero(matrix, n);
-    return EXIT_SUCCESS;
+    return 0;
 }
 
-
+    

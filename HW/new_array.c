@@ -108,7 +108,7 @@ void array_remove(struct array* o, element_type pos)
 void array_set_capacity(struct array* a, size_type new_capacity)
 {
     assert(a->size <= new_capacity);
-    new_capacity = sizeof a/sizeof a[0];
+    new_capacity = a->capacity;
     // TODO
 }
 

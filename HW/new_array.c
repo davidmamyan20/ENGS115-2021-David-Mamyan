@@ -91,16 +91,10 @@ void array_remove(struct array* o, element_type pos)
     assert(pos >= 0);
     assert(pos < o->size);
     int i;
-    for ( i = 0; i < o->size; i++)
-    {
-	 if (i == pos)
-         	break;	 
-    }
-    if (i < o->size)
+    for ( i = pos; i < o->size; i++)
     {
 	    o->size = o->size - 1;
-	    for (int j = i; j < o->size; j++)
-		    o[j] = o[j+1];
+		    o[i] = o[i+1];
     }
     // TODO
 }

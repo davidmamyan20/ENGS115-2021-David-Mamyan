@@ -93,7 +93,7 @@ void array_remove(struct array* o, element_type pos)
     int i;
     for ( i = 0; i < o->size; i++)
     {
-	 if (o[i] == pos)
+	 if (i == pos)
          	break;	 
     }
     if (i < o->size)

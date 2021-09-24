@@ -18,7 +18,7 @@ struct array
 
 size_type array_size(struct array* o)
 {
-    return o->size;
+	return o->size;
 }
 
 size_type array_capacity(struct array* o)
@@ -91,18 +91,24 @@ void array_remove(struct array* o, element_type pos)
     assert(pos >= 0);
     assert(pos < o->size);
     int i;
-    for ( i = pos; i < o->size; i++)
+    for ( i = pos; i <= array_size(o); i++)
     {
-	    o->size = o->size - 1;
-		    o[i] = o[i+1];
+	    o->start[i] = o->start[i+1];
     }
+	    o->size = o->size - 1;
+    
     // TODO
 }
 
 void array_set_capacity(struct array* a, size_type new_capacity)
 {
     assert(a->size <= new_capacity);
-    new_capacity = a->capacity;
+    element_type* arr = (element_type*)malloc(sizeof(element_type) * new_capacity);
+    for (int i = 0; i < a->size; ++i) {
+	    arr[i] = a->start[i];
+    }
+    a->start = arr;
+
     // TODO
 }
 
@@ -131,6 +137,7 @@ int main()
     for (i = 0; i < number; ++i) {
         array_remove(a, 0);
     }
+   // array_set_capacity(a, 10);
     array_print(a);
     return 0;
 }

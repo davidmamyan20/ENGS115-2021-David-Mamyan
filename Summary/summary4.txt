@@ -9,3 +9,8 @@ Today, we discussed the complexity of the selection sort, which is equal to n^2,
 06.10.21
 
 Today, we are implementing a selection sort algorithm in an array. First, we need to select the largest item. Secondly, we should swap the largest item with the last item, moving it to the end. Then we ignore the largest last item, then search the rest of the array for the largest item. As we start from 0, our last element is n-1, not n. Then we do an array swap with n-2, because n-1 is fixed. In case if the indexes n and i are the same, then the program will not do the required action, so we need an if(l != i), then swap, in order to make the program work. We must swap the largest item with the last item (next-to-last in the original array), then continue until n-1 items are selected and swapped (the remaining item on the first index). The start of the array is the pointer to the first element of the array. Then we do insertion sort. For the first step we set the Array[0] as the sorted part of the array and Array[1] - Array [n - 1] as not sorted part of the array, then take the first item from the not sorted array and find its proper place in the sorted part.
+
+08.10.21
+
+In todays lecture, we discussed the merge sort. First it divides the array in two parts and starts with returning the first part, we divide it until its 1 element in it, if it's one we return it, then after comparisons we return, but we always start from the first one, then the next one, after we finish with the whole first part, we do the same with the second part. In the pseudocode array is divided in two parts array1 = array[0]......array[n/2], array2 = array[n/2]......array[n]. 
+

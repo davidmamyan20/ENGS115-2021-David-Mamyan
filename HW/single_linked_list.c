@@ -119,27 +119,23 @@ void list_insert(struct sl_list* a, size_type pos, element_type value)
 
 void list_remove(struct sl_list* o, element_type pos)
 {
-    // TODO
-    assert (pos < list_size(o));
-    assert (pos >= 0);
-    struct node* temp = o->start; 
-    while(temp !=NULL || i!=pos-1)
-    {
-    temp = temp->next;
-    }
-    i++;
-    struct node* target_node = temp->next;
-    temp->next = target_node->next;
-    //delete target_node
-    
-    //destructor
-    temp = o->start;
-    while (temp !=NULL)
-    {
-	    temp = temp->next;
-    }
-    //delete temp
-    o->start = NULL;
+    int i = 0;
+    struct node* prev_node = o->start;
+   if (pos == 1)
+   {
+	  o->start = prev_node->next;
+	  free(prev_node);
+   }
+   else
+   {
+	  for(i = 0; i < (pos-2); i++)
+	  {
+		 prev_node = prev_node->next;
+	  }
+	 struct node* tmp = prev_node->next;
+	 prev_node->next = tmp->next;
+	 free(tmp);
+   } 
 }
 
 void list_print(struct sl_list* a)

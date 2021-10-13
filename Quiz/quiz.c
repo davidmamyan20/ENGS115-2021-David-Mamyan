@@ -173,18 +173,52 @@ void array_merge_sort(struct array* a)
 {
     size_type n = array_size(a);
     if (n == 1) {
+	   
         return;
     }
     else
     {
 	    size_type n1 = n / 2;
 	    size_type n2 = n - n1;
+	    assert(n1 + n2 == n);
 	    struct array* array1 = array_create(n1, 0, n1);
 	    struct array* array2 = array_create(n2, 0, n2);
+	    for (int i = 0; i < n; i++)
+	    {
+		    if(i < n1)
+		    {
+	             array_modify(array1, i, array_access(a,i);
+		    }
+		    else
+		    {
+		     array_modify(array2, i, array_access(a,i);
+		    }
+	    }
+	    array_merge_sort(array1);
+	    array_merge_sort(array2);
+	    merge(array1, array2, a);
     }
     
     // TODO
 }
+
+void merge (struct array* array1, struct array* array2, struct array* a)
+{
+int i = 0;
+int temp;
+while(!array_empty(array1) && !array_empty(array2))
+{
+if(array_access(array1, 0) < array_access(array2, 0))
+		{
+		 
+		}
+}
+
+		
+
+		
+}
+
 
 void array_print(struct array* a)
 {

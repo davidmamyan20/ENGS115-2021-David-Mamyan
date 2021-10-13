@@ -169,6 +169,42 @@ void array_insertion_sort(struct array* a)
  *      - Repeat until there is no more item is left in one of the halves
  *      - Move the remaining items in the other half to the array
  */
+void merge (struct array* array1, struct array* array2, struct array* a)
+{
+int i = 0;
+int temp;
+while(!array_empty(array1) && !array_empty(array2))
+{
+	if(array_access(array1, 0) < array_access(array2, 0))
+		{
+		 array_modify(a, i, array_access(array1, 0));
+		 array_remove(array2, 0);
+		 ++i;
+		}
+	else
+	{
+		array_modify(a, i, array_access(array2, 0));
+		array_remove(array2, 0);
+		++i;
+	}
+	while(!array_empty(array1))
+	{
+		array_modify(a, i, array_access(array1, 0));
+		array_remove(array1, 0);
+		++i;
+	}
+	while(!array_empty(array2))
+	{
+		array_modify(a, i, array_access(array1, 0));
+		array_remove(array2, 0);
+		++i;
+	}
+}
+
+		
+
+		
+}
 void array_merge_sort(struct array* a)
 {
     size_type n = array_size(a);
@@ -202,23 +238,15 @@ void array_merge_sort(struct array* a)
     // TODO
 }
 
-void merge (struct array* array1, struct array* array2, struct array* a)
+void array_bubble_sort(struct array* a, size_type n)
 {
-int i = 0;
-int temp;
-while(!array_empty(array1) && !array_empty(array2))
-{
-if(array_access(array1, 0) < array_access(array2, 0))
-		{
-		 
-		}
+	int i,j;
+	for (i = 0; i < n-1; i++)
+	for (j = 0; j < n-1; j++)
+	if(j>j+1)
+	array_swap (a, j, j+1);
+	
 }
-
-		
-
-		
-}
-
 
 void array_print(struct array* a)
 {

@@ -3,7 +3,7 @@
 #include <limits.h>
 #include <assert.h>
 
-typedef double element_type;
+typedef int element_type;
 typedef int size_type;
 
 struct array
@@ -223,11 +223,11 @@ void array_merge_sort(struct array* a)
 	    {
 		    if(i < n1)
 		    {
-	             array_modify(array1, i, array_access(a,i);
+	             array_modify(array1, i, array_access(a,i));
 		    }
 		    else
 		    {
-		     array_modify(array2, i, array_access(a,i);
+		     array_modify(array2, i, array_access(a,i));
 		    }
 	    }
 	    array_merge_sort(array1);
@@ -334,10 +334,33 @@ void merge_sort_test()
     array_print(a);
 }
 
+void prime_numbers(struct array* a, element_type el)
+{
+  for (size_type i = 0; i < a->size + 1; i++)
+	  el = array_access(a,i);
+ 	  if(el == 1){
+		  printf("not a prime number, %d");
+	  }
+	  if(el == 2){
+		  printf("It's a prime number, %d");
+	  }
+	  if(el % 2 == 0)
+	  {
+		  printf("not a prime number, %d");
+	  }
+  
+	  else
+	  {
+		  printf("%d", el);
+	  }
+	  
+}	
+
 int main()
 {
     // array_test();
     selection_sort_test();
     merge_sort_test();
+    prime_numbers();
     return 0;
 }

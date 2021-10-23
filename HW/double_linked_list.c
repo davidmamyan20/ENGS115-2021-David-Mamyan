@@ -237,11 +237,11 @@ void insertion_sort(struct list* l)
 		element_type pos = i;
 		while((pos > 0) && (list_at(l, pos - 1) > el))
 		{
-			list_insert(l, list_at(l, pos - 1), pos);
+			el = list_at(l, pos - 1);
 			--pos;
 		}
 
-		list_insert(l, el, pos);
+		el = list_at(l,pos);
 	}
 
 }

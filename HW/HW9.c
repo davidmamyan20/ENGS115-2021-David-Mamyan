@@ -177,7 +177,7 @@ int main()
     array_modify (a,5,4);
     array_modify (a,6,6);
     array_modify (a,7,9);
-    quick_sort(a,0,8);
+    //quick_sort(a,0,8);
     array_print(a);
     return 0;
 }

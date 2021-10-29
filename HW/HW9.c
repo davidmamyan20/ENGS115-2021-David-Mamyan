@@ -112,7 +112,14 @@ void array_set_capacity(struct array* a, size_type new_capacity)
     a->capacity = new_capacity;
 }
 
-
+void array_print(struct array* a)
+{
+    int i = 0;
+    printf("array size=%d capacity=%d\n", array_size(a), array_capacity(a));
+    for (i = 0; i < array_size(a); ++i) {
+        printf("array[%d]=%f\n", i, array_access(a, i));
+    }
+}
 void array_swap(struct array* a, size_type f, size_type s)
 {
     assert(f >= 0);

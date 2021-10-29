@@ -133,21 +133,28 @@ void array_swap(struct array* a, size_type f, size_type s)
 
 size_type partition(struct array* o, size_type left, size_type right, size_type pivot)
 {
-    size_type leftPointer = left - 1;
-    size_type rightPointer = right;
-
-    while(array_access(o, leftPointer + 1) < pivot);
-    while(rightPointer > 0 && array_access(o, rightPointer - 1) > pivot)
-    if(leftPointer >= rightPointer)
+    size_type* leftpointer = left - 1;
+    size_type* rightpointer = right;
+    
+    while(1)
+    {
+    while(array_access(o, leftpointer + 1) < pivot)
+    {
+    while(rightpointer > 0 && array_access(o, rightpointer - 1) > pivot)
+    {
+    if(leftpointer >= rightpointer)
     {
         break;
     }
     else
     {
-        array_swap(o,leftPointer, rightPointer);
+        array_swap(o,leftpointer, rightpointer);
     }
-    array_swap (o,leftPointer, right);
-    return leftPointer;
+    array_swap (o,leftpointer, right);
+    }
+    }
+    }
+    return leftpointer;
 }
 
 void quick_sort(struct array* a, size_type right, size_type left)
@@ -177,7 +184,7 @@ int main()
     array_modify (a,5,4);
     array_modify (a,6,6);
     array_modify (a,7,9);
-    //quick_sort(a,0,8);
+    quick_sort(a,0,7);
     array_print(a);
     return 0;
 }

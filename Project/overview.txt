@@ -1,3 +1,16 @@
 Project Data Converter (David Mamyan, Edgar Tonoyan)
 
+1.1 Document identifier
+
+DCP.c
+A c program, the document is a data converter, which gives clients the multiple libraries to convert the datas. 
+
+1.3 Definitions
+
+search - a process of searching a specific element in an array or a list
+sort - a proccess of puting the elements of an array, in a specified order
+
+
+1.5 Overview
+
  The type of the project is going to be a data converter, which is can convert an available data to json,html,csv, or etc. The processes which will be taken during the project are search and sort. Just before moving on, a little detail about the gitlog, which is a process, which shows you the commits, you have been doing recently in the mentioned repository.  

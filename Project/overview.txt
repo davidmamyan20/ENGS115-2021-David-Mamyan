@@ -1,0 +1,3 @@
+Project Data Converter (David Mamyan, Edgar Tonoyan)
+
+ The type of the project is going to be a data converter, which is can convert an available data to json,html,csv, or etc. The processes which will be taken during the project are search and sort. Just before moving on, a little detail about the gitlog, which is a process, which shows you the commits, you have been doing recently in the mentioned repository.  

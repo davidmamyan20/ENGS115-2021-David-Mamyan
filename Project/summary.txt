@@ -1,0 +1,3 @@
+Week 1
+
+This week I and my partner Edgar Tonoyan decided to write a project, which is a data converter, which can convert an implementation to another language like json, html or cfe. So far we only wrote a little overview of the project, and discussed what we are supposed to cover until next week.

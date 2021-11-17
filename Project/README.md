@@ -6,7 +6,25 @@ Our project name is gitlog. The content of this document is a data converter pro
 
 Scope
 
- We know that the gitlog command shows every commits of your repository done recently. So our goal is to show the information of the gitlog command on json and convert it to html. At first, we will do it without the filter, for second, we will do it with an optional filter, where it will show the name of the person who used the gitlog command.
+Introduction section provides overview of the document content as well as the brief
+description of the project requirements. Section Definitions of terms and acronyms includes
+description of all the terms and acronyms used in the document. Section References has
+links to the documentation and sources used to build this document. Overview Section
+briefly describes the requirements and purpose of the project. All the requirements are
+described in subsections of Requirements section. The features that the project should
+support are described in section Functional Requirements. Platform Requirements specifies
+all the hardware and software requirements of the project, including hardware models and
+operating system versions. Implementation Requirements section includes requirements on
+the tools, libraries, applications, programming languages. Performance Requirements
+
+section contains information of the performance of the developed product, in particular run-
+time of the applications developed for the project. The methods used to verify the project
+
+are specified in Verification Requirements section. Documentation Requirements project lists
+all the documents that should be created for the project. Project Management section
+includes Error: Reference source not found, Dependencies, Assumptions, Risks and Schedule
+and Effort Estimations sections which describe the project state and estimations with
+consideration of the dependencies and risks.
  
 
 Overview

@@ -71,7 +71,7 @@ Git
 
 2.4 Performance Requirements
 
-The run-time speed of this program will be normal.
+Complexity O(n^2).
 
 2.5 Verification Requirements
 

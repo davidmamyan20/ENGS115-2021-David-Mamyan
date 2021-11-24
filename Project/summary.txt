@@ -2,9 +2,12 @@ Week 1
 
 This week I and my partner Edgar Tonoyan decided to write a project, which is a data converter, which can convert an implementation to another language like json, html or cfe. So far we only wrote a little overview of the project, and discussed what we are supposed to cover until next week.
 
-Week 2
 
 Week 2
 
 We completed the prd template required for our project in order to start writing it next week. We decided to write a data converter code which will convert a git log written in the json file to html. The code will be written by C language,
 either on the Terminal of Debian Linux or the Terminal of Mac OS.
+
+Week 3
+
+This week, we discussed the PRD templates of every project including our own, however our project's topic coincides with the topic of other students, so our discussion on Wednesday wasn't too long, so their project's discussion was the main part and helped us in order to better experience what we are supposed to implement during the implementation process.

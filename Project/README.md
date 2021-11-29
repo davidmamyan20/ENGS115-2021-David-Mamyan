@@ -71,7 +71,7 @@ Git
 
 2.4 Performance Requirements
 
-Complexity O(n^2).
+Complexity O(n^2).Because while it prints the gitlog command on json, it should also do the same actions converted to html, which will take n^2 steps. That's why the complexity is O(n^2).
 
 2.5 Verification Requirements
 

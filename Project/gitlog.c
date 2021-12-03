@@ -1,21 +1,14 @@
 #include stdio.h
-#include stdlib.h
+#include json/json.h
 
-void print_gitlog()
-{
-	//TODO
-}
-void gitlog_json()
-{
-	//TODO
-}
+
 void convert_to_html()
 {
 	//TODO
 }
-void filter()
+void filter_out()
 {
-	//Optional
+	//TODO
 }
 void main()
 {

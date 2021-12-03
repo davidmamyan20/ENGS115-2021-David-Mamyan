@@ -11,3 +11,7 @@ either on the Terminal of Debian Linux or the Terminal of Mac OS.
 Week 3
 
 This week, we discussed the PRD templates of every project including our own, however our project's topic coincides with the topic of other students, so our discussion on Wednesday wasn't too long, so their project's discussion was the main part and helped us in order to better experience what we are supposed to implement during the implementation process.
+
+Week 4
+
+This week we were assigned to write the name of the functions of our program, so that we could better experience what our project is about, and what is supposed to be implemented in the code.

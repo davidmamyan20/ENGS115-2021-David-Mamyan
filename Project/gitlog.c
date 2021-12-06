@@ -4,15 +4,15 @@
 
 void convert_to_html()
 {
-	//TODO
+	//Convert the json file to html
 }
 void filter_out()
 {
-	//TODO
+	//use the filter in our code
 }
 void main()
 {
-	//TODO
+  //the main part of the code
 }
 
 

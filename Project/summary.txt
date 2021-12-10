@@ -15,3 +15,9 @@ This week, we discussed the PRD templates of every project including our own, ho
 Week 4
 
 This week we were assigned to write the name of the functions of our program, so that we could better experience what our project is about, and what is supposed to be implemented in the code.
+
+Week 5
+
+This week is the final week of the project. This week we started working on the project, we submitted the half-complete version of the code on Friday, but the project will be complete by Monday. PRD Template will aslo be changed along with it. Also there will be a test function during the process of writing the code.
+
+

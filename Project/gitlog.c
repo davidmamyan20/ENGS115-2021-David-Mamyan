@@ -8,6 +8,10 @@ void access_json(int argc, char **argv) {
 	struct json_object *name;
 	struct json_object *data;
 	struct json_object *body;
+	size_t n_name;
+	size_t n_data;
+	size_t n_body;
+	size_t i;
 
 
 	fp = fopen("commits.json","r");
@@ -20,10 +24,12 @@ void access_json(int argc, char **argv) {
 	json_object_object_get_ex(parsed_json, "data", &data);
 	json_object_object_get_ex(parsed_json, "body", &body);
 
+        	
+	
 	printf("Name: %s\n", json_object_get_string(name));
-	printf("Data: %d\n", json_object_get_int(data));
+	printf("Data: %s\n", json_object_get_string(data));
 	printf("Body: %s\n", json_object_get_string(body));
-
+		
 }
 
 void sort_by_name()

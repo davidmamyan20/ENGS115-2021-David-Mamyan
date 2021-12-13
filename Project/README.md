@@ -75,7 +75,7 @@ Complexity O(n^2).Because while it prints the gitlog command on json, it should 
 
 2.5 Verification Requirements
 
-This project is not a user input program, so the user won't have to write something, while running the code. The tests should be run manually, as no automation is possible.
+The user should write either David Mamyan or Edgar Tonoyan, in order to see the commits of the repository.
 
 2.6 Documentation Requirements
 

@@ -1,5 +1,0 @@
-Project Data Converter (David Mamyan, Edgar Tonoyan)
-
-Overview
-
-Our project is going to be a data converter type, where we will use git log and try to write put the results in the json and change it to html, so that the viewer could read the git log results in html by using Firefox, for example. At first we will do with no filters, and we may also use filters for the second try, for example in a way that there could be written only the name of the person who used the git log command.

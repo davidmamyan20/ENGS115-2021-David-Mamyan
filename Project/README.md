@@ -4,7 +4,7 @@ Project Data Converter (David Mamyan, Edgar Tonoyan)
 
 1.1 Document Identifier
 
-Our project name is gitlog. The content of this document is a data converter program, which will show the gitlog command's actions on json, which information will be converted to html, so the reader couldsee the information via html on firedox.TThe project will be done by David Mamyan and Edgar Tonoyan.The project is available in ENGS-115-2021-David-Mamyan repository and its Project folder.
+Our project name is gitlog. The content of this document is a data converter program, which will show the gitlog command's actions on json, which information will be read while running the code on C. The project will be done by David Mamyan and Edgar Tonoyan.The project is available in ENGS-115-2021-David-Mamyan repository and its Project folder.
 
 1.2 Scope
 
@@ -47,27 +47,30 @@ ENGS115-2021-David-Mamyan/Project
 
 1.5 Overview
 
-Our project is going to be a data converter type, where we will use git log and try to write put the results in the json and change it to html, so that the viewer could read the git log results in html by using Firefox, for example. At first we will do with no filters, and we may also use filters for the second try, for example in a way that there could be written only the name of the person who used the git log command.The requirements of this project are knowing how to write a code in C language, most important terms of the code which are required to know are the search and sort.
+Our project is going to be a data converter type, where we will use git log and try to write put the results in the json and it must be run in the C code and the user should be able to read it. The requirements of this project are knowing how to write a code in C language, most important terms of the code which are required to know are the search and sort. There are also new libraries which will be required to use during the code.
 
 
 2 Requirements
 
 2.1 Functional Requirements
 
-The code must be read on html, so that you could read the git log info on html via firefox.
+The code must be read on C, so that you could read the git log info while running the Code.
 json file also must be used, because we will use the details of the git log as a json file.
 
 2.2 Platform Requirements
 
 Debian Linux
 Mac OS
+C library
+Boolean Library
+Json/c Library
+String Library
+However the complying won't be possible on Mac OS, so the code can be runned in Linux. To compile use gcc gitlog.c -ljson-c, then ./a.out. 
 
 2.3 Implementation Requirements
 
 C language
 json
-html
-Git
 
 2.4 Performance Requirements
 
@@ -75,7 +78,7 @@ Complexity O(n^2).Because while it prints the gitlog command on json, it should 
 
 2.5 Verification Requirements
 
-The user should write either David Mamyan or Edgar Tonoyan, in order to see the commits of the repository.
+The user isn't required to write anything, when it compiles, it will just show the results.
 
 2.6 Documentation Requirements
 
@@ -91,9 +94,14 @@ Risk that can occur are that the consumer took a wrong library or an operator to
 
 3.2 Schedule and Effort Estimations
 
-The project will be a json file converted to html, where the user will enter the git log command, and the results will be show in the json file, which will then be converted to html.
+The project will be a json file available in C while running the code, where the user will enter the git log command, and the results will be shown in the result of running a C code. 
 (Optional) There will be a filtre, where there will only be written the name and the surname of the person who entered the git log command.
 
 3.3 Aceptance Criteria
 
-The acceptance criteria is seeing the project on html, working and running well without error.
+The acceptance criteria is seeing our commits on C, after compiling.
+
+3.4 Report
+Edgar Tonoyan - implemented the array_create(), array_swap(), function, created the presentation, created the json file, the presentation and the video is uploaded by Edgar.
+David Mamyan - implemented the json parsing code in C, the print function, the test function, array_insert(). Worked on the presentation and recorded the video.
+Both of us worked on PRD.

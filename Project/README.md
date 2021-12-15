@@ -105,3 +105,6 @@ The acceptance criteria is seeing our commits on C, after compiling.
 Edgar Tonoyan - implemented the array_create(), array_swap(), function, created the presentation, created the json file, the presentation and the video is uploaded by Edgar.
 David Mamyan - implemented the json parsing code in C, the print function, the test function, array_insert(). Worked on the presentation and recorded the video.
 Both of us worked on PRD.
+
+3.5 Warning
+In the recording there was an issue with compiling, but then we compiled it again and there were no errors.

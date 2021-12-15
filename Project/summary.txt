@@ -18,6 +18,6 @@ This week we were assigned to write the name of the functions of our program, so
 
 Week 5
 
-This week is the final week of the project. This week we started working on the project, we submitted the half-complete version of the code on Friday, but the project will be complete by Monday. PRD Template will aslo be changed along with it. Also there will be a test function during the process of writing the code.
+This week is the final week of the project. This week we started working on the project, we submitted the half-complete version of the code on Friday, but the project will be complete by Monday. PRD Template will aslo be changed along with it. Also there will be a test function during the process of writing the code. The project has been completed and submitted on GitHub, also a presentation and a video have been committed to Github.
 
 

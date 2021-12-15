@@ -158,7 +158,7 @@ int main()
 	char name[200];
 
 	struct array *commits = access_json();
-	sort_by_date(commits);
+	sort_by_name (commits);
 
 	
 	struct array *committer = representation(commits, name);

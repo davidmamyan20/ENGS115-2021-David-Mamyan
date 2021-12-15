@@ -153,7 +153,7 @@ struct array* representation(struct array* a, char* name)
 	return named;
 }
 
-int main()
+void test()
 {
 	char name[200];
 
@@ -163,7 +163,11 @@ int main()
 	
 	struct array *committer = representation(commits, name);
 
-	return 0;
+}
+
+int main()
+{
+	test();
 }
 
 

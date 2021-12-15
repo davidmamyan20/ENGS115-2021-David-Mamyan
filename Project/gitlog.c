@@ -75,7 +75,7 @@ struct array* access_json()
 	assert(NULL != commit);
 	json_bool r = json_object_object_get_ex(top_obj, "commits", &commit);
 	assert(json_type_array == json_object_get_type(commit));
-        assert(r!= TRUE);
+        assert(TRUE == r);
 	int len = json_object_array_length(commit);
 	struct json_object* new_array = json_object_new_array();
 	assert(NULL != new_array);
@@ -89,7 +89,7 @@ struct array* access_json()
 		struct json_object* c = json_object_new_object();
 		assert(NULL !=c);
 		r = json_object_object_get_ex(st, "name", &c);
-		assert(TRUE != r);
+		assert(TRUE == r);
 		assert(json_type_string == json_object_get_type(c));
 		struct json_object* d = json_object_new_object();
 		assert(NULL != d);
@@ -115,7 +115,7 @@ struct array* access_json()
 	json_object_object_del(top_obj, "commits");
 	json_object_object_add(top_obj, "commits", new_array);
 	int result = json_object_to_file("commits.json", top_obj);
-	assert(r != -1);
+	assert(TRUE == r);
 	return arr;
 }
 
@@ -155,13 +155,12 @@ struct array* representation(struct array* a, char* name)
 
 int main()
 {
-	char name[20];
+	char name[200];
 
 	struct array *commits = access_json();
-	sort_by_name(commits);
+	sort_by_date(commits);
 
-	printf("enter name: ");
-	fgets(name, 20, stdin);
+	
 	struct array *committer = representation(commits, name);
 
 	return 0;

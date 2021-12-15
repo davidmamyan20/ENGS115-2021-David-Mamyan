@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <assert.h>
 #include <string.h>
 #include <json-c/json.h>
+#include <stdbool.h>
 
 typedef int size_type;
 typedef struct json_object* element_type;
@@ -67,15 +69,13 @@ struct array* access_json()
 {
 	const char filename[] = "commits.json";
 	struct json_object* top_obj = json_object_from_file(filename);
-
 	enum json_type type = json_object_get_type(top_obj);
 	assert(json_type_object == type);
 	struct json_object* commit = json_object_new_object();
 	assert(NULL != commit);
 	json_bool r = json_object_object_get_ex(top_obj, "commits", &commit);
-	assert(0 != r);
 	assert(json_type_array == json_object_get_type(commit));
-
+        assert(r!= TRUE);
 	int len = json_object_array_length(commit);
 	struct json_object* new_array = json_object_new_array();
 	assert(NULL != new_array);
@@ -88,12 +88,12 @@ struct array* access_json()
 		assert(json_type_object == json_object_get_type(st));
 		struct json_object* c = json_object_new_object();
 		assert(NULL !=c);
-		r = json_object_object_get_ex(st, "commiter", &c);
-		assert(0 != r);
+		r = json_object_object_get_ex(st, "name", &c);
+		assert(TRUE != r);
 		assert(json_type_string == json_object_get_type(c));
 		struct json_object* d = json_object_new_object();
 		assert(NULL != d);
-		json_object_object_get_ex(st, "commit date", &d);
+		json_object_object_get_ex(st, "data", &d);
 		assert(json_type_string == json_object_get_type(d));
 		struct json_object* b = json_object_new_object();
 		assert(NULL != b);
@@ -102,7 +102,7 @@ struct array* access_json()
 		const char* cc = json_object_get_string(c);
 		const char* dc = json_object_get_string(d);
 		const char* bc = json_object_get_string(b);
-		printf("commiter = %s, commit date = %s, body = %s\n", cc, dc, bc);
+		printf("name = %s, data = %s, body = %s\n", cc, dc, bc);
 		if(0 != strcmp(cc, "1")){
 		struct json_object* cp = NULL;
 		cp = json_tokener_parse(json_object_get_string(st));
@@ -114,7 +114,7 @@ struct array* access_json()
 		}
 	json_object_object_del(top_obj, "commits");
 	json_object_object_add(top_obj, "commits", new_array);
-	int result = json_object_to_file("commits_new.json", top_obj);
+	int result = json_object_to_file("commits.json", top_obj);
 	assert(r != -1);
 	return arr;
 }
